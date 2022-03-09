@@ -1,4 +1,4 @@
-package com.andrew.springreact.config;
+package com.andrew.dsmovie.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

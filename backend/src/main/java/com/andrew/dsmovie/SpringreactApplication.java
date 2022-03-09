@@ -1,4 +1,4 @@
-package com.andrew.springreact;
+package com.andrew.dsmovie;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

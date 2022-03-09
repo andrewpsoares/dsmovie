@@ -1,4 +1,4 @@
-package com.andrew.springreact.model;
+package com.andrew.dsmovie.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
