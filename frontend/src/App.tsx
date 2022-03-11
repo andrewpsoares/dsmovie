@@ -17,6 +17,7 @@ function App() {
           <Route path=":movieId" element={<Form />} />
         </Route>
       </Routes>
+      <footer>Site desenvolvido por Andrew :)</footer>
     </BrowserRouter>
   );
 }
