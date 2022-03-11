@@ -34,17 +34,19 @@ public class ScoreService {
         }
 
         Movie movie = movieRepository.findById(scoreDto.getMovieId()).get();
+
         Score score = new Score();
         score.setMovie(movie);
         score.setUser(user);
         score.setValue(scoreDto.getScore());
         score = scoreRepository.saveAndFlush(score);
+        movie.getScores().add(score);
 
         double sum = 0.0;
         for (Score s : movie.getScores()){
             sum = sum + s.getValue();
         }
-        double avg = sum / movie.getScores().size();
+           double avg = sum / movie.getScores().size();
 
         movie.setScore(avg);
         movie.setCount(movie.getScores().size());
