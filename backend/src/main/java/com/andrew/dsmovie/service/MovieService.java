@@ -25,12 +25,9 @@ public class MovieService {
 
     @Transactional(readOnly = true)
     public Optional<MovieDto> findById(Long id){
-        Optional<Movie> movie = movieRepository.findById(id);
-        if (movie.isPresent()) {
-            Movie movieObj = movie.get();
-            return Optional.of(ObjMapperConfig.map(movieObj, MovieDto.class));
-        }else {
+        if (!movieRepository.existsById(id)){
             return Optional.empty();
         }
+        return Optional.of(ObjMapperConfig.map(movieRepository.findById(id).get(), MovieDto.class));
     }
 }
