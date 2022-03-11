@@ -1,13 +1,14 @@
 package com.andrew.dsmovie.service;
 
+import com.andrew.dsmovie.config.ObjMapperConfig;
 import com.andrew.dsmovie.dto.MovieDto;
 import com.andrew.dsmovie.dto.ScoreDto;
-import com.andrew.dsmovie.model.Movie;
-import com.andrew.dsmovie.model.Score;
-import com.andrew.dsmovie.model.User;
-import com.andrew.dsmovie.repository.MovieRepository;
-import com.andrew.dsmovie.repository.ScoreRepository;
-import com.andrew.dsmovie.repository.UserRepository;
+import com.andrew.dsmovie.domain.model.Movie;
+import com.andrew.dsmovie.domain.model.Score;
+import com.andrew.dsmovie.domain.model.User;
+import com.andrew.dsmovie.domain.repository.MovieRepository;
+import com.andrew.dsmovie.domain.repository.ScoreRepository;
+import com.andrew.dsmovie.domain.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -48,6 +49,6 @@ public class ScoreService {
         movie.setScore(avg);
         movie.setCount(movie.getScores().size());
         movie = movieRepository.save(movie);
-        return new MovieDto(movie);
+        return ObjMapperConfig.map(movie, MovieDto.class);
     }
 }

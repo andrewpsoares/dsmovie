@@ -1,6 +1,6 @@
 package com.andrew.dsmovie.dto;
 
-import com.andrew.dsmovie.model.Movie;
+import com.andrew.dsmovie.domain.model.Movie;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

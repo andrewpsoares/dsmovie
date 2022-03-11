@@ -1,4 +1,4 @@
-package com.andrew.dsmovie.model;
+package com.andrew.dsmovie.domain.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

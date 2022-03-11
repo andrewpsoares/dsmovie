@@ -1,6 +1,6 @@
-package com.andrew.dsmovie.repository;
+package com.andrew.dsmovie.domain.repository;
 
-import com.andrew.dsmovie.model.Movie;
+import com.andrew.dsmovie.domain.model.Movie;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
